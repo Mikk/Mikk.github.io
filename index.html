@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html><head>
+<script type="text/javascript">
+<!--
+function calculate()
+{
+var s = document.varavform.span.value
+var n = document.varavform.pnumber.value
+var w = document.varavform.width.value
+s = parseInt(s);
+n = parseInt(n);
+w = parseInt(w);
+
+var f=(s-(n*w))/(n+1);
+
+document.getElementById('vastus').innerHTML =  Math.round (f*10)/10 + ' mm';
+}
+
+//-->
+</script>
+</head>
+<body>
+
+<big style="font-weight: bold;"><big>Väraval pulkade vahe kalkulaator</big></big><br>
+<form name="varavform" action="">
+
+<table>
+<tbody>
+<tr>
+<td>S </td>
+<td><input name="span" size="6"><br></td>
+</tr>
+<tr>
+<td>n </td>
+<td><input name="pnumber" size="6"><br></td>
+</tr>
+<tr>
+<td>W </td>
+<td><input name="width" size="6"><br></td>
+</tr>
+</tbody>
+</table>
+
+</form>
+
+
+
+<table>
+<tbody>
+<tr>
+<td>
+	<input id="submitButton" value="Enter" onclick="calculate();" type="button">
+</td>
+<td>
+	<div id="vastus"></div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<br><img alt="Värava joonis" src="images/varav.png"><br>
+
+
+
+
+
+
+</body></html>
